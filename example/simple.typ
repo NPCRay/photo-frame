@@ -9,7 +9,7 @@
 #{
   let img = crop(bytes(read("simple.jpg", encoding: none)), start: (28%, 30%))
 
-  let ext_info = (
+  let ext-info = (
     "title": text(size: 20pt)[瞭望远方],
     "address": text(size: 8pt)[丽江 \ 玉龙雪山],
     "date": text(size: 8pt)[2025-10-01],
@@ -17,14 +17,14 @@
     "background": rgb("#bf021b"),
   )
 
-  render("A6", flipped: false, theme: "theme1", img: img, ext_info: ext_info)
+  render("A6", flipped: false, theme: "theme1", img: img, ext-info: ext-info)
 
 
   let width = 102mm
   let height = 152mm
   let img = crop(bytes(read("simple.jpg", encoding: none)), start: (25%, 25%), resize: 75%)
 
-  let ext_info = (
+  let ext-info = (
     "title": text(size: 20pt)[瞭望远方],
     "address": text(size: 8pt)[丽江 \ 玉龙雪山],
     "date": text(size: 8pt)[2025 \ 10/01],
@@ -32,5 +32,5 @@
     "background": rgb("#bf021b"),
   )
 
-  render((width, height), flipped: true, theme: "theme2", img: img, ext_info: ext_info)
+  render((width, height), flipped: true, theme: "theme2", img: img, ext-info: ext-info)
 }
