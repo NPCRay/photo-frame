@@ -1,8 +1,7 @@
 ## Photo Frame
-
 photo-frame is a package for easy to use photo frame in Typst. It provides lots of themes and image crop util to make
-your photo frame. For usage, please refer to [simple.typ]("example/simple.typ") and render result
-is [simple.png]("example/simple.png").
+your photo frame. For usage, please refer to [simple.typ]("https://github.com/NPCRay/photo-frame/blob/master/example/simple.typ") and render result
+is [simple.png]("https://github.com/NPCRay/photo-frame/blob/master/example/simple.png").
 
 ## Simple Usage
 
