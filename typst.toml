@@ -1,5 +1,5 @@
 [package]
-name = "photo-frame"
+name = "polario-frame"
 version = "0.1.0"
 entrypoint = "src/export.typ"
 authors = ["npcray <@npcray>"]

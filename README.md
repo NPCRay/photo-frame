@@ -1,23 +1,21 @@
-## Photo Frame
-photo-frame is a package for easy to use photo frame in Typst. It provides lots of themes and image crop util to make
-your photo frame. For usage, please refer to https://github.com/NPCRay/photo-frame/blob/master/example/simple.typ and render result
-is https://github.com/NPCRay/photo-frame/blob/master/example/simple.png.
+## Polario Frame
+**`polario-frame`** is a package for easy to use photo frame in Typst. It provides lots of themes and image crop util to make
+your photo frame. `polario` is derived from **Polaroid**, reflecting the aspiration for this tool to deliver desired photos as quickly as a Polaroid camera.
 
 ## Simple Usage
-
-Import photo-frame package with
+Import `polario-frame` package with
 
 ```typst
-#import "@preview/photo-frame:0.1.0": *
+#import "@preview/polario-frame:0.1.0": *
 ```
 
-Use crop util to crop image
+Use crop-util to crop image
 
 ```typst
 let img = crop(bytes(read("simple.jpg", encoding: none)), start: (25%, 25%), resize: 75%)
 ```
 
-Use photo-frame to render photo frame
+Use `polario-frame` to render photo frame
 
 ```typst
 let ext-info = (
@@ -25,13 +23,14 @@ let ext-info = (
     "address": text(size: 8pt)[丽江 \ 玉龙雪山],
     "date": text(size: 8pt)[2025-10-01],
     "logo": image("CGA.png"),
-    "background": rgb("#bf021b"),
+    "background": rgb("#ff0404"),
 )
 render("A6", flipped: true, theme: "theme1", img: img, ext-info: ext-info)
 ```
+This makes it easy to add the `theme1` frame to the photo. If you need other theme frames, you can check the content in [simple.typ](https://github.com/NPCRay/photo-frame/blob/master/example/simple.typ) to see what **ext-info** are required for each frame.
+![result](https://raw.githubusercontent.com/NPCRay/polario-frame/refs/heads/master/example/theme1.png)
 
 ## Versions
 
 ### 0.1.0
-
 Initial release
