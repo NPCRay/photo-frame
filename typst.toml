@@ -5,6 +5,6 @@ entrypoint = "src/export.typ"
 authors = ["npcray <@npcray>"]
 license = "Apache-2.0"
 compiler = "0.13.0"
-repository = "https://github.com/NPCRay/photo-frame"
+repository = "https://github.com/NPCRay/polario-frame"
 description = "A Collection of Photo Frame Templates."
 categories = ["poster", "utility", "layout"]
