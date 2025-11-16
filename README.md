@@ -1,36 +1,65 @@
 ## Polario Frame
-**`polario-frame`** is a package for easy to use photo frame in Typst. It provides lots of themes and image crop util to make
-your photo frame. `polario` is derived from **Polaroid**, reflecting the aspiration for this tool to deliver desired photos as quickly as a Polaroid camera.
+**`polario-frame`** is an easy-to-use photo frame package for Typst. It provides multiple themes and image cropping utilities to create your photo frames. `polario` is derived from **Polaroid**, reflecting the aspiration for this tool to deliver desired photos as quickly as a Polaroid camera.
 
 ## Simple Usage
-Import `polario-frame` package with
+1. Import the `polario-frame` package:
 
 ```typst
-#import "@preview/polario-frame:0.1.0": *
+#import "@preview/polario-frame:1.0.0": *
 ```
 
-Use crop-util to crop image
+2. Use the crop utility to crop the image:
 
 ```typst
-let img = crop(bytes(read("simple.jpg", encoding: none)), start: (25%, 25%), resize: 75%)
+#let img = crop(bytes(read("simple.jpg", encoding: none)), start: (25%, 25%), resize: 75%)
 ```
 
-Use `polario-frame` to render photo frame
+3. Use `polario-frame` to render the photo frame:
 
 ```typst
-let ext-info = (
-    "title": text(size: 20pt)[瞭望远方],
-    "address": text(size: 8pt)[丽江 \ 玉龙雪山],
-    "date": text(size: 8pt)[2025-10-01],
-    "logo": image("CGA.png"),
-    "background": rgb("#ff0404"),
+#let ext-info = (
+    "first": image("logo/apple.svg"),
+    "second": text(size: 22pt)[This is the title],
+    "third": text(size: 8pt)[Kunming\ Lijiang],
+    "extend-middle-ratio": 65%,
+    "background": rgb("#ffffffee"),
 )
-render("A6", flipped: true, theme: "theme1", img: img, ext-info: ext-info)
+#render((width, height), flipped: false, theme: "classic-bottom-three", img: img, ext-info: ext-info)
 ```
-This makes it easy to add the `theme1` frame to the photo. If you need other theme frames, you can check the content in [simple.typ](https://github.com/NPCRay/photo-frame/blob/master/example/simple.typ) to see what **ext-info** are required for each frame.
-![result](https://raw.githubusercontent.com/NPCRay/polario-frame/refs/heads/master/example/theme1.png)
+
+This makes it easy to add the `classic-bottom-three` frame to the photo.
+
+Rendering result
+
+![result](https://raw.githubusercontent.com/NPCRay/polario-frame/refs/heads/master/example/example.png)
+
+If you need other theme frames, check the [example](https://github.com/NPCRay/photo-frame/blob/master/example). It contains default themes, custom themes, and examples of popular smartphone brand frames. If you find that the basic themes don't cover your needs, please submit an issue or PR.
+
+## Basic Theme Parameters
+### Render Parameters
+- `size`: Can be passed as a tuple like `(width, height)`, or standard paper names like `A1`~`A11`
+- `flipped`: Whether to flip, default is false
+- `theme`: Frame theme, available values `classic-bottom-two` `classic-bottom-three` `classic-right-two` `classic-right-three` `polaroid-bottom-two` `polaroid-bottom-three` `polaroid-right-two` `polaroid-right-three`
+- `img`: Image, should be cropped before passing
+- `ext-info`: Frame extended information, determined according to theme
+
+### Supported ext-info Properties
+- `first`: The first element from left to right or top to bottom, empty by default
+- `second`: The second element from left to right or top to bottom, empty by default
+- `third`: The third element from left to right or top to bottom, empty by default (only supported by *-three themes)
+- `extend-ratio`: Extended white border width ratio, default 10%
+- `extend-half-ratio`: Extended white border first element ratio, default 50% (only supported by *-two themes)
+- `extend-middle-ratio`: Extended middle element ratio, default 20% (only supported by *-three themes)
+- `background`: Background color, none by default
+- `inset-ratio`: Padding ratio, no inset by default 3% (only supported by polaroid-* themes)
 
 ## Versions
 
+### 1.0.0
+- Official version
+- Provides 8 basic theme styles `classic-bottom-two` `classic-bottom-three` `classic-right-two` `classic-right-three` `polaroid-bottom-two` `polaroid-bottom-three` `polaroid-right-two` `polaroid-right-three` frames
+- Provides cropping tool `crop`
+- Added more examples in example folder
+
 ### 0.1.0
-Initial release
+- Initial release
