@@ -1,9 +1,7 @@
 #import "@preview/polario-frame:1.0.0": crop, render
 
 #set page(paper: "a6", flipped: false, margin: (x: 0cm, y: 0cm))
-
 #set par(spacing: 0mm)
-
 #set text(font: ("MiSans Latin", "LXGW WenKai Mono"))
 
 #let logo = image("logo/apple.svg")

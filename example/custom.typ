@@ -7,8 +7,6 @@
 #let height = 152mm
 #set page(width: width, height: height, flipped: false, margin: (x: 0cm, y: 0cm))
 
-
-
 #let image-bytes = bytes(read("simple.jpg", encoding: none))
 #let title = text(size: 25pt)[这是标题]
 #let address = text(size: 8pt)[丽江 \ 玉龙雪山]
@@ -17,7 +15,7 @@
 
 #{
   let img = crop(image-bytes, start: (28%, 30%))
-  let line-v = line(stroke: 2pt + gray, length: height * 0.08, angle: 90deg)
+  let line-v = line(stroke: 2pt + gray, length: 80%, angle: 90deg)
   let second = grid(
     columns: (auto, 100%, auto),
     line-v, title, line-v,
@@ -35,7 +33,7 @@
 #set page(width: width, height: height, flipped: true, margin: (x: 0cm, y: 0cm))
 #{
   let img = crop(image-bytes, start: (25%, 25%), resize: 75%)
-  let line-v = line(stroke: 2pt + gray, length: height * 0.08)
+  let line-v = line(stroke: 2pt + gray, length: 80%)
   let second = grid(
     rows: (auto, 100%, auto),
     line-v, title, line-v,
