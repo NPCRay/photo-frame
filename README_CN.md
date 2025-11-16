@@ -30,6 +30,10 @@
 
 这样可以轻松地为照片添加 `classic-bottom-three` 相框。
 
+渲染效果
+
+![result](https://raw.githubusercontent.com/NPCRay/polario-frame/refs/heads/master/example/example.png)
+
 如果您需要其他主题相框，可以查看 [exmaple](https://github.com/NPCRay/photo-frame/blob/master/example)。 里面包含了默认主题，自定义主题，以及现在常见的各个手机品牌的相框样例。如果发现基本主题没有覆盖到，请提 issue 或者 PR。
 
 ## 基础主题参数
