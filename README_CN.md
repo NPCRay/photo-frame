@@ -32,9 +32,9 @@
 
 渲染效果
 
-![result](https://raw.githubusercontent.com/NPCRay/polario-frame/refs/heads/master/example/example.png)
+![显示同一张照片的四个不同相框，展示不同风格的相机设置、品牌和日期](https://raw.githubusercontent.com/NPCRay/polario-frame/bca5fb6752e4784827d455ada1442364c0f43d37/example/example.png)
 
-如果您需要其他主题相框，可以查看 [exmaple](https://github.com/NPCRay/photo-frame/blob/master/example)。 里面包含了默认主题，自定义主题，以及现在常见的各个手机品牌的相框样例。如果发现基本主题没有覆盖到，请提 issue 或者 PR。
+如果您需要其他主题相框，可以查看 [exmaple](https://github.com/NPCRay/photo-frame/blob/example)。 里面包含了默认主题，自定义主题，以及现在常见的各个手机品牌的相框样例。如果发现基本主题没有覆盖到，请提 issue 或者 PR。
 
 ## 基础主题参数
 ### 渲染参数

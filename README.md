@@ -31,7 +31,7 @@ This makes it easy to add the `classic-bottom-three` frame to the photo.
 
 Rendering result
 
-![result](https://raw.githubusercontent.com/NPCRay/polario-frame/refs/heads/master/example/example.png)
+![A page displaying the same photograph with four different frames, showing the camera settings, brand and the date in different styles](https://raw.githubusercontent.com/NPCRay/polario-frame/bca5fb6752e4784827d455ada1442364c0f43d37/example/example.png)
 
 If you need other theme frames, check the [example](https://github.com/NPCRay/photo-frame/blob/master/example). It contains default themes, custom themes, and examples of popular smartphone brand frames. If you find that the basic themes don't cover your needs, please submit an issue or PR.
 
