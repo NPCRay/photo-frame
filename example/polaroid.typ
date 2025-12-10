@@ -4,7 +4,7 @@
 #set par(spacing: 0mm)
 #set text(font: ("MiSans Latin", "LXGW WenKai Mono"))
 
-#let logo = image("logo/apple.svg")
+#let logo = image("CGA.png")
 #let model = text(size: 10pt)[iPhone 17 Pro]
 #let title = text(size: 22pt)[这是标题]
 #let address = text(size: 8pt)[昆明\ 丽江]
